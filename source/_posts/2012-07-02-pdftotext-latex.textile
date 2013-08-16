@@ -1,0 +1,16 @@
+---
+layout: post
+title: Compiling LaTeX to text
+tags: latex
+updatedonutc: 2012-12-31 09:47 UTC 
+---
+I needed to obtain a text copy of my Curriculum Vitae, which is typeset in LaTeX, for a site that doesn't allow to upload files, but only a text description.
+At first I searched for programs that compiled LaTeX sources to text directly, but I were disappointed by the results.
+Then I thought to search for programs that converted a PDF to text, and I found @pdftotext@, part of the "xpdf":http://www.foolabs.com/xpdf/ program. I run it with the command
+
+bc. pdftotext -enc UTF-8 <input>.pdf <output>.txt
+
+and I was initially satisfied with the results. I later noticed that in some cases the layout was wrong -- especially when I crammed more information in one row.
+I then found about "detex":http://www.ctan.org/tex-archive/support/detex and "opendetex":http://code.google.com/p/opendetex/, that simply strips LaTeX tags. I modified the opendetex sources in order to add a space when a right curly brace was encountered and the results now are more understandable.
+
+As an aside, I found an interesting program called "pandoc":http://johnmacfarlane.net/pandoc/ that could convert LaTeX to Markdown, but it doesn't support the specific command used by "moderncv":http://www.ctan.org/tex-archive/macros/latex/contrib/moderncv/

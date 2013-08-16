@@ -1,0 +1,26 @@
+---
+layout: post
+title: Compensation (draft)
+tags: essay
+updatedonutc: 2013-03-13 19:27
+---
+
+Some random thoughts on what I've learned about compensation as an alternative to transactions.
+
+<ul>
+<li>Compensation means to rollback the effect of a transaction (in the broadest sense of the term)
+with another transaction that has the opposite effects</li>
+<li>When thinking about compensation, I've always stopped at "What do I do if the compensation action fails?" --
+it seemed to me a big problem I cannot handle (how can I do something that does not fail?)</li>
+<li>from <a href="http://www.theregister.co.uk/2006/06/01/soa_compensation_schlesinger/">these</a>
+ <a href="http://www.theregister.co.uk/2006/05/30/jim_gray/">articles</a> from The Register I gain a fundamental
+ insight: if the compensation operation fails, the only alternative is to let it handle to a human operator</li>
+ <ul>
+ <li>This can handle extended outages of a service (think of one of AWS or Azure)</li>
+ <li>Under the hypothesis that if a system is unavailable the others are available (not always true,
+ see <a href="http://blogs.msdn.com/b/windowsazure/archive/2013/03/01/details-of-the-february-22nd-2013-windows-azure-storage-disruption.aspx">these</a> 
+ <a href="http://blogs.msdn.com/b/windowsazure/archive/2012/03/09/summary-of-windows-azure-service-disruption-on-feb-29th-2012.aspx">episodes</a> from Azure)</li>
+ </ul>
+<li>In my opinion, it is also fine to retry the compensation operation for some time and at last
+give up and ask for human intervention</li> 
+</ul>

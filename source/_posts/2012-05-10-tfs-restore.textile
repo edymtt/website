@@ -1,0 +1,25 @@
+---
+layout: post
+title: tfs 2010 restore
+tags: dotnet
+updatedonutc: 2012-07-02 18:20
+---
+A brief procedure on how to restore a TFS 2010 backup on a new machine with only the necessary stuff
+
+# install SQL Server 2008 R2
+# install TFS using the advanced wizard
+** exclude reporting, analysis, sharepoint
+** set up the desired service user for TFS
+
+# do not start any GUI
+# open a command prompt -- that is @cmd.exe@
+# stop the TFS service with @TFSServiceControl quiesce@
+# launch @TFSConfig PrepSQL /SQLInstance: ServerName@, replacing @ServerName@ with the name of the SQL Server instance you installed on the first step
+# launch @TFSConfig RemapDBS /DatabaseName:servername;TFS_Configuration /SQLInstances:servername /Continue@
+# if it doesn't work launch again
+# launch @TFSConfig Accounts /ResetOwner /SQLInstance: ServerName /DatabaseName: DatabaseName@
+# launch @TFSConfig Accounts /add /AccountType:ApplicationTier /account: AccountName /SQLInstance: ServerName /DatabaseName: DatabaseName@
+# launch @TFSConfig registerDB /SQLInstance: ServerName /DatabaseName: DatabaseName@
+# launch @tfsservicecontrol unquiesce@
+# client machine do not need any further reconfiguration, even if the server name changed, since they pick up the TFS server based on GUID
+

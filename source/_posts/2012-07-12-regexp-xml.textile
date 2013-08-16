@@ -1,0 +1,23 @@
+---
+layout: post
+title: Regex exercises -- render human-readable one-line xml
+tags: regex
+updatedonutc: 2012-07-12 19:18
+---
+
+You can find the @sed@ scripts in this "GitHub repository":https://github.com/edymtt/regex
+
+*Problem* Try to render human-readable a one-line XML
+
+*Solution* This can be done in steps:
+# insert new line character after the XML declaration
+# insert new line character after the DOCTYPE declaration
+# insert new line character after an empty element
+# insert new line character after an end element
+
+The tricky part is to insert new line characters between start elements. In the way @sed@ works,
+it seems it cannot work on superimposed matches, so to break more than stow start elements. I work around
+this problem by calling @sed@ multiple times until the input is the same of the output (i.e. no more substitution possible).
+Probably this isn't the best solution if the input file is huge.
+
+The exercise is container in the @xml@ folder.

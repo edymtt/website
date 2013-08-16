@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Compiling LaTeX to text - edymtt</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+   <script src="//use.edgefonts.net/asap.js"></script>
+        <link rel="stylesheet" href="/css/edymtt.css">
+    <link rel="stylesheet" href="/css/pinboard.css">
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/index.html">edymtt</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="/cv.html">CV</a></li><!--  class="active"-->
+              <li><a href="/syllabus/skills.html">Syllabus</a></li>
+              <li><a href="/stuff.html">Stuff</a></li>
+              <li><a href="/findmeon.html">Find me on...</a></li>
+              <li><a href="/info.html">Info</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+  <div class="container-narrow">
+    <h2>Compiling LaTeX to text</h2>
+        <h3>Last updated on 2012-12-31 09:47 UTC UTC</h3>
+    <p>back to <a href="/stuff.html">stuff</a></p>
+    <p>I needed to obtain a text copy of my Curriculum Vitae, which is typeset in LaTeX, for a site that doesn&#8217;t allow to upload files, but only a text description.<br />
+At first I searched for programs that compiled LaTeX sources to text directly, but I were disappointed by the results.<br />
+Then I thought to search for programs that converted a <span class="caps">PDF</span> to text, and I found <code>pdftotext</code>, part of the <a href="http://www.foolabs.com/xpdf/">xpdf</a> program. I run it with the command</p>
+<pre><code>pdftotext -enc UTF-8 &lt;input&gt;.pdf &lt;output&gt;.txt</code></pre>
+<p>and I was initially satisfied with the results. I later noticed that in some cases the layout was wrong &#8212; especially when I crammed more information in one row.<br />
+I then found about <a href="http://www.ctan.org/tex-archive/support/detex">detex</a> and <a href="http://code.google.com/p/opendetex/">opendetex</a>, that simply strips LaTeX tags. I modified the opendetex sources in order to add a space when a right curly brace was encountered and the results now are more understandable.</p>
+<p>As an aside, I found an interesting program called <a href="http://johnmacfarlane.net/pandoc/">pandoc</a> that could convert LaTeX to Markdown, but it doesn&#8217;t support the specific command used by <a href="http://www.ctan.org/tex-archive/macros/latex/contrib/moderncv/">moderncv</a></p>
+    <p>back to <a href="/stuff.html">stuff</a></p>
+
+</div>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

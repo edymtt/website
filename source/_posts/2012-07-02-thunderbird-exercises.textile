@@ -1,0 +1,30 @@
+---
+layout: post
+title: Thunderbird exercises
+tags: thunderbird
+updatedonutc: 2013-01-13 18:49
+---
+I've started playing with "Thunderbird":https://wiki.mozilla.org/Thunderbird .
+I'll try to put my experiments in the form of exercises for two reasons:
+
+* avoid to rehash the existing documentation;
+* force me to think about what I'm doing, without following instructions literally.
+
+So here we go!
+
+# compile the development version of Thunderbird under OS X 10.7 (done)
+# compile the development version of Thunderbird under Fedora 17 (done)
+# compile the development version of Thunderbird under Windows (done)
+# compile Thunderbird 13.0.1
+** it is better done from tarball, but can be done from @comm-release@?
+# configure parallel build of Thunderbird (e.g. 4 threads for dual core) (done on OS X)
+# use pymake under Windows
+# improve compilation times
+## disable tests
+## use ccache
+## understand incremental build
+# follow IRC channel (possibly with Thunderbird Daily :-) )
+# replicate Mozilla build infrastructure
+## BuildBot
+## multiple architecture
+## Tinderboxpushlog

@@ -1,0 +1,43 @@
+---
+layout: post
+title: Regex exercises -- replace variable with property
+tags: regex
+updatedonutc: 2012-07-12 19:19
+---
+
+You can find the @sed@ scripts in this "GitHub repository":https://github.com/edymtt/regex
+
+*Problem* Substitute all the occurences of 
+
+bc. Public <something> as <type>
+
+with
+
+bc. Public Readonly Property <something> as <type>
+  Get
+    Return _source.<something>
+  end Get
+End Property
+
+*Solution* Under Visual Studio, in the Find/Replace dialog, the match pattern is
+
+bc. Public {[^ ]+} as {.#}\n
+
+The replace pattern is
+
+bc. Public Readonly Property \1 as \2 \ Get \n Return _source\.\1 \n End Get \n End Property
+
+Under @sed@ on OS X you need this expression
+
+bc. s:Public \([^ ][^ ]*\) as \(.*\):Public Readonly Property \1 As \2\
+  Get\
+    Return _source\.\1\
+  End Get\
+End Property\
+:
+
+The interesting part is that you cannot use @\+@ to match one or more character, it seems that
+this is a GNU extension and it is not found in the version shipped in OS X (derived from the one
+in FreeBSD).
+
+The exercise is contained in the @property@ folder.

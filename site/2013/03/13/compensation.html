@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Compensation (draft) - edymtt</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+   <script src="//use.edgefonts.net/asap.js"></script>
+        <link rel="stylesheet" href="/css/edymtt.css">
+    <link rel="stylesheet" href="/css/pinboard.css">
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/index.html">edymtt</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="/cv.html">CV</a></li><!--  class="active"-->
+              <li><a href="/syllabus/skills.html">Syllabus</a></li>
+              <li><a href="/stuff.html">Stuff</a></li>
+              <li><a href="/findmeon.html">Find me on...</a></li>
+              <li><a href="/info.html">Info</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+  <div class="container-narrow">
+    <h2>Compensation (draft)</h2>
+        <h3>Last updated on 2013-03-13 19:27 UTC</h3>
+    <p>back to <a href="/stuff.html">stuff</a></p>
+    Some random thoughts on what I've learned about compensation as an alternative to transactions.
+
+<ul>
+<li>Compensation means to rollback the effect of a transaction (in the broadest sense of the term)
+with another transaction that has the opposite effects</li>
+<li>When thinking about compensation, I've always stopped at "What do I do if the compensation action fails?" --
+it seemed to me a big problem I cannot handle (how can I do something that does not fail?)</li>
+<li>from <a href="http://www.theregister.co.uk/2006/06/01/soa_compensation_schlesinger/">these</a>
+ <a href="http://www.theregister.co.uk/2006/05/30/jim_gray/">articles</a> from The Register I gain a fundamental
+ insight: if the compensation operation fails, the only alternative is to let it handle to a human operator</li>
+ <ul>
+ <li>This can handle extended outages of a service (think of one of AWS or Azure)</li>
+ <li>Under the hypothesis that if a system is unavailable the others are available (not always true,
+ see <a href="http://blogs.msdn.com/b/windowsazure/archive/2013/03/01/details-of-the-february-22nd-2013-windows-azure-storage-disruption.aspx">these</a> 
+ <a href="http://blogs.msdn.com/b/windowsazure/archive/2012/03/09/summary-of-windows-azure-service-disruption-on-feb-29th-2012.aspx">episodes</a> from Azure)</li>
+ </ul>
+<li>In my opinion, it is also fine to retry the compensation operation for some time and at last
+give up and ask for human intervention</li> 
+</ul>
+    <p>back to <a href="/stuff.html">stuff</a></p>
+
+</div>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

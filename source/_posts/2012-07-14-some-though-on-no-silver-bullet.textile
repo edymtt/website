@@ -1,0 +1,18 @@
+---
+layout: post
+title: Some thoughts on No Silver Bullet
+tags: essay
+updatedonutc: 2012-07-14 20:49
+---
+
+I was reading "No Silver Bullet":http://www.cs.nott.ac.uk/~cah/G51ISS/Documents/NoSilverBullet.html from "Frederick P. Brooks, Jr":https://www.cs.unc.edu/~brooks/. I was wondering about the meaning of the sentence "These gains flow from the transformation of computer manufacture from an assembly industry to a process industry".
+
+I want to report my first attempts to decipher this, in order to clarify myself and hopefully help others.
+
+* First let me modernize the terminology. "Assembly industry" seems a synonym for "Discrete manufacturing":http://en.wikipedia.org/wiki/Discrete_manufacturing, the production of items by assembling more simple components (e.g. cars), while "process industry" seems a synonym for "Process manufacturing":http://en.wikipedia.org/wiki/Process_manufacturing, the production of items by some transformations on source components so that the output cannot be converted back (e.g. food);
+* So Brooks is saying that computer manufacturing is experiencing the increase of price-performance ratio because over time computers are no more built like a simple assembly of simple parts (electronic parts and wires) but as a direct transformation of source materials into the final product (think especially about silicon transformed into CPU/SoC).
+* I draw the conclusion that the process manufacturing of computers (roughly translating to miniaturization) permits to obtain better performance with relatively low work with regard to discrete manufacturing, but this is a claim for which I haven't searched any argument.
+* as other conclusions from Brooks, this seems to hold true at current days -- smartphone and tablets are rapidly becoming as powerful as computer because of the process manufacturing of computers.
+* the only drawback of process manufacturing of computers is that their repair is quite difficult and/or expensive -- in fact, food cannot be repaired but must be thrown away
+
+Finally, I want to point out a useful "article":http://queue.acm.org/detail.cfm?id=2108597 from Poul-Henning Kamp that helps clarifying the first chapter of the Mythical Man Month.

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Regex exercises -- render human-readable one-line xml - edymtt</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+   <script src="//use.edgefonts.net/asap.js"></script>
+        <link rel="stylesheet" href="/css/edymtt.css">
+    <link rel="stylesheet" href="/css/pinboard.css">
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/index.html">edymtt</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="/cv.html">CV</a></li><!--  class="active"-->
+              <li><a href="/syllabus/skills.html">Syllabus</a></li>
+              <li><a href="/stuff.html">Stuff</a></li>
+              <li><a href="/findmeon.html">Find me on...</a></li>
+              <li><a href="/info.html">Info</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+  <div class="container-narrow">
+    <h2>Regex exercises -- render human-readable one-line xml</h2>
+        <h3>Last updated on 2012-07-12 19:18 UTC</h3>
+    <p>back to <a href="/stuff.html">stuff</a></p>
+    <p>You can find the <code>sed</code> scripts in this <a href="https://github.com/edymtt/regex">GitHub repository</a></p>
+<p><strong>Problem</strong> Try to render human-readable a one-line <span class="caps">XML</span></p>
+<p><strong>Solution</strong> This can be done in steps:</p>
+<ol>
+	<li>insert new line character after the <span class="caps">XML</span> declaration</li>
+	<li>insert new line character after the <span class="caps">DOCTYPE</span> declaration</li>
+	<li>insert new line character after an empty element</li>
+	<li>insert new line character after an end element</li>
+</ol>
+<p>The tricky part is to insert new line characters between start elements. In the way <code>sed</code> works,<br />
+it seems it cannot work on superimposed matches, so to break more than stow start elements. I work around<br />
+this problem by calling <code>sed</code> multiple times until the input is the same of the output (i.e. no more substitution possible).<br />
+Probably this isn&#8217;t the best solution if the input file is huge.</p>
+<p>The exercise is container in the <code>xml</code> folder.</p>
+    <p>back to <a href="/stuff.html">stuff</a></p>
+
+</div>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+---
+layout: post
+title: SSH and .NET - a personal experience
+tags: ssh other
+updatedonutc: 2012-05-21 19:59
+---
+Recently I had to communicate via SFTP with an embedded device running Linux from a .NET program.
+
+I've started using "http://sshnet.codeplex.com/":SSHNET . The library is simple to use and worked, but I've experienced problem in uploading files in some scenario -- basically the file was uploaded but the SSH server often refused to answer, hanging the .NET program.
+
+I've then switched to "http://www.chilkatsoft.com/ssh-sftp-component.asp":Chilkat, but I've experienced the problem again, although less frequently and without any program hang.
+
+Finally, thanks to some wise suggestions, I've decided to use  "http://www.chiark.greenend.org.uk/~sgtatham/putty/":Putty, in particular psftp. I have to invoke it using Process.Start, but it worked flawlessly.
+
+I wonder the cause of this behaviour. Maybe a day...
+

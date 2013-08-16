@@ -1,0 +1,43 @@
+---
+layout: edymtt
+title: curriculum vitae
+---
+<p><a href="eric_miotto_cv_en_main.pdf">Download cv in English</a></p>
+<p><a href="eric_miotto_cv_en_tldr.pdf">Download short cv in English</a></p>
+<p><a href="http://cv.edymtt.io/">(alpha) HTML cv in English</a></p>
+<p><a href="eric_miotto_cv_it_main.pdf">Download cv in Italian</a></p>
+<p>Updated on 2013/08/10 14:05 UTC circa, <a href="/cvrevisionhistory.html">changelog</a></p>
+
+You can also find me on "Stack Overflow Careers 2.0":http://careers.stackoverflow.com/edymtt and "LinkedIn":http://it.linkedin.com/in/ericmiotto
+
+<h3>Additional info</h3>
+<h4>Autoevaluation of computer skills</h4>
+<p> See <a href="/syllabus/skills.html">Syllabus</a></p>
+
+h4. Thesis
+
+Master thesis: "Challenges in the Integration of domain-specific and scientific bodies of knowledge in Model-Driven Engineering":challenges_mde_master_thesis_eric_miotto.pdf
+
+First thesis (In italian): "Un’architettura orientata ai servizi che offra alta disponibilità":soa_first_thesis_eric_miotto.pdf
+
+<h4>Autoevaluation of English</h4>
+<p>According to the <a href="http://europass.cedefop.europa.eu/en/resources/european-language-levels-cefr">Common European Framework of Reference (CEF) level</a></p>
+<ul>
+<li>Understanding</li>
+  <ul>
+    <li>Listening: B2 -- Independent User</li>
+    <li>Reading: A1 -- Independent User</li>
+  </ul>
+<li>Speaking</li>
+  <ul>
+    <li>Spoken interaction: A2 -- Basic User</li>
+    <li>Spoken prodution: A2 -- Basic User</li>
+  </ul>
+<li>Writing: B1 -- Independent user</li>
+</ul>
+<p>In real life:</p>
+<ul>
+<li>I can read easily technical and narrative articles/books;</li>
+<li>I can watch films, tv series and YouTube shows (sometimes with the help of subtitles)</li>
+<li>I can handle technical conversation -- I'm able to interact to technical support to explain the issues I'm having and I can understand what it is told to me.</li>
+</ul>

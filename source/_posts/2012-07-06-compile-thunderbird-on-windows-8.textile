@@ -1,0 +1,17 @@
+---
+layout: post
+title: (obsolete) Compile Thunderbird on Windows 8 Release Preview
+tags: archive
+updatedonutc: 2013-01-13 16:13
+---
+
+**Please note that these instructions are obsolete and I keep them for historical reasons, for compilation on Windows 8 you should refer to "these instructions":https://developer.mozilla.org/en-US/docs/Developer_Guide/Build_Instructions/Windows_Prerequisites on Mozilla Developer Network**
+
+# download Visual C++ Express 2010
+# apply Visual Studio 2010 SP1
+# install Windows 8 SDK (this includes SDK 7.0A)
+# install DirectX SDK (this will install .NET 2.0/3.5 alongside)
+# install MozillaBuild
+# start MozillaBuild from @start-msvc10.bat@
+# follow the instructions to obtain the Daily executable
+

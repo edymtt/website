@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>SSH and .NET - a personal experience - edymtt</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+   <script src="//use.edgefonts.net/asap.js"></script>
+        <link rel="stylesheet" href="/css/edymtt.css">
+    <link rel="stylesheet" href="/css/pinboard.css">
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/index.html">edymtt</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="/cv.html">CV</a></li><!--  class="active"-->
+              <li><a href="/syllabus/skills.html">Syllabus</a></li>
+              <li><a href="/stuff.html">Stuff</a></li>
+              <li><a href="/findmeon.html">Find me on...</a></li>
+              <li><a href="/info.html">Info</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+  <div class="container-narrow">
+    <h2>SSH and .NET - a personal experience</h2>
+        <h3>Last updated on 2012-05-21 19:59 UTC</h3>
+    <p>back to <a href="/stuff.html">stuff</a></p>
+    <p>Recently I had to communicate via <span class="caps">SFTP</span> with an embedded device running Linux from a .<span class="caps">NET</span> program.</p>
+<p>I&#8217;ve started using <a href="SSHNET">http://sshnet.codeplex.com/</a> . The library is simple to use and worked, but I&#8217;ve experienced problem in uploading files in some scenario &#8212; basically the file was uploaded but the <span class="caps">SSH</span> server often refused to answer, hanging the .<span class="caps">NET</span> program.</p>
+<p>I&#8217;ve then switched to <a href="Chilkat">http://www.chilkatsoft.com/ssh-sftp-component.asp</a>, but I&#8217;ve experienced the problem again, although less frequently and without any program hang.</p>
+<p>Finally, thanks to some wise suggestions, I&#8217;ve decided to use  <a href="Putty">http://www.chiark.greenend.org.uk/~sgtatham/putty/</a>, in particular psftp. I have to invoke it using Process.Start, but it worked flawlessly.</p>
+<p>I wonder the cause of this behaviour. Maybe a day&#8230;</p>
+    <p>back to <a href="/stuff.html">stuff</a></p>
+
+</div>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

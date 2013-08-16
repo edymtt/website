@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Regex exercises -- replace variable with property - edymtt</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+   <script src="//use.edgefonts.net/asap.js"></script>
+        <link rel="stylesheet" href="/css/edymtt.css">
+    <link rel="stylesheet" href="/css/pinboard.css">
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/index.html">edymtt</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="/cv.html">CV</a></li><!--  class="active"-->
+              <li><a href="/syllabus/skills.html">Syllabus</a></li>
+              <li><a href="/stuff.html">Stuff</a></li>
+              <li><a href="/findmeon.html">Find me on...</a></li>
+              <li><a href="/info.html">Info</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+  <div class="container-narrow">
+    <h2>Regex exercises -- replace variable with property</h2>
+        <h3>Last updated on 2012-07-12 19:19 UTC</h3>
+    <p>back to <a href="/stuff.html">stuff</a></p>
+    <p>You can find the <code>sed</code> scripts in this <a href="https://github.com/edymtt/regex">GitHub repository</a></p>
+<p><strong>Problem</strong> Substitute all the occurences of</p>
+<pre><code>Public &lt;something&gt; as &lt;type&gt;</code></pre>
+<p>with</p>
+<pre><code>Public Readonly Property &lt;something&gt; as &lt;type&gt;
+  Get
+    Return _source.&lt;something&gt;
+  end Get
+End Property</code></pre>
+<p><strong>Solution</strong> Under Visual Studio, in the Find/Replace dialog, the match pattern is</p>
+<pre><code>Public {[^ ]+} as {.#}\n</code></pre>
+<p>The replace pattern is</p>
+<pre><code>Public Readonly Property \1 as \2 \ Get \n Return _source\.\1 \n End Get \n End Property</code></pre>
+<p>Under <code>sed</code> on OS X you need this expression</p>
+<pre><code>s:Public \([^ ][^ ]*\) as \(.*\):Public Readonly Property \1 As \2\
+  Get\
+    Return _source\.\1\
+  End Get\
+End Property\
+:</code></pre>
+<p>The interesting part is that you cannot use <code>\+</code> to match one or more character, it seems that<br />
+this is a <span class="caps">GNU</span> extension and it is not found in the version shipped in OS X (derived from the one<br />
+in FreeBSD).</p>
+<p>The exercise is contained in the <code>property</code> folder.</p>
+    <p>back to <a href="/stuff.html">stuff</a></p>
+
+</div>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

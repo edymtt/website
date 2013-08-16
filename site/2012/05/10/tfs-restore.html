@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>tfs 2010 restore - edymtt</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+   <script src="//use.edgefonts.net/asap.js"></script>
+        <link rel="stylesheet" href="/css/edymtt.css">
+    <link rel="stylesheet" href="/css/pinboard.css">
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/index.html">edymtt</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="/cv.html">CV</a></li><!--  class="active"-->
+              <li><a href="/syllabus/skills.html">Syllabus</a></li>
+              <li><a href="/stuff.html">Stuff</a></li>
+              <li><a href="/findmeon.html">Find me on...</a></li>
+              <li><a href="/info.html">Info</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+  <div class="container-narrow">
+    <h2>tfs 2010 restore</h2>
+        <h3>Last updated on 2012-07-02 18:20 UTC</h3>
+    <p>back to <a href="/stuff.html">stuff</a></p>
+    <p>A brief procedure on how to restore a <span class="caps">TFS</span> 2010 backup on a new machine with only the necessary stuff</p>
+<ol>
+	<li>install <span class="caps">SQL</span> Server 2008 R2</li>
+	<li>install <span class="caps">TFS</span> using the advanced wizard
+	<ul>
+		<li>exclude reporting, analysis, sharepoint</li>
+		<li>set up the desired service user for <span class="caps">TFS</span></li>
+	</ul></li>
+</ol>
+<ol>
+	<li>do not start any <span class="caps">GUI</span></li>
+	<li>open a command prompt &#8212; that is <code>cmd.exe</code></li>
+	<li>stop the <span class="caps">TFS</span> service with <code>TFSServiceControl quiesce</code></li>
+	<li>launch <code>TFSConfig PrepSQL /SQLInstance: ServerName</code>, replacing <code>ServerName</code> with the name of the <span class="caps">SQL</span> Server instance you installed on the first step</li>
+	<li>launch <code>TFSConfig RemapDBS /DatabaseName:servername;TFS_Configuration /SQLInstances:servername /Continue</code></li>
+	<li>if it doesn&#8217;t work launch again</li>
+	<li>launch <code>TFSConfig Accounts /ResetOwner /SQLInstance: ServerName /DatabaseName: DatabaseName</code></li>
+	<li>launch <code>TFSConfig Accounts /add /AccountType:ApplicationTier /account: AccountName /SQLInstance: ServerName /DatabaseName: DatabaseName</code></li>
+	<li>launch <code>TFSConfig registerDB /SQLInstance: ServerName /DatabaseName: DatabaseName</code></li>
+	<li>launch <code>tfsservicecontrol unquiesce</code></li>
+	<li>client machine do not need any further reconfiguration, even if the server name changed, since they pick up the <span class="caps">TFS</span> server based on <span class="caps">GUID</span></li>
+</ol>
+    <p>back to <a href="/stuff.html">stuff</a></p>
+
+</div>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
