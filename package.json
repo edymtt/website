@@ -2,10 +2,10 @@
   "name": "node-example",
   "version": "0.0.1",
   "dependencies": {
-    "node-static": "*"
+    "node-static": "0.6.9"
   },
   "engines": {
-    "node": "*",
-    "npm": "*"
+    "node": "0.10.*",
+    "npm": "1.3.*"
   }
 }
