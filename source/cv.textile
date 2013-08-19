@@ -6,7 +6,7 @@ title: curriculum vitae
 <p><a href="eric_miotto_cv_en_tldr.pdf">Download short cv in English</a></p>
 <p><a href="http://cv.edymtt.io/">(alpha) HTML cv in English</a></p>
 <p><a href="eric_miotto_cv_it_main.pdf">Download cv in Italian</a></p>
-<p>Updated on 2013/08/10 14:05 UTC circa, <a href="/cvrevisionhistory.html">changelog</a></p>
+<p>Updated on 2013/08/19 18:25 UTC circa, <a href="/cvrevisionhistory.html">changelog</a></p>
 
 You can also find me on "Stack Overflow Careers 2.0":http://careers.stackoverflow.com/edymtt and "LinkedIn":http://it.linkedin.com/in/ericmiotto
 
