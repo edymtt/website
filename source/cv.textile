@@ -20,24 +20,4 @@ Master thesis: "Challenges in the Integration of domain-specific and scientific 
 
 First thesis (In italian): "Un’architettura orientata ai servizi che offra alta disponibilità":soa_first_thesis_eric_miotto.pdf
 
-<h4>Autoevaluation of English</h4>
-<p>According to the <a href="http://europass.cedefop.europa.eu/en/resources/european-language-levels-cefr">Common European Framework of Reference (CEF) level</a></p>
-<ul>
-<li>Understanding</li>
-  <ul>
-    <li>Listening: B2 -- Independent User</li>
-    <li>Reading: A1 -- Independent User</li>
-  </ul>
-<li>Speaking</li>
-  <ul>
-    <li>Spoken interaction: A2 -- Basic User</li>
-    <li>Spoken prodution: A2 -- Basic User</li>
-  </ul>
-<li>Writing: B1 -- Independent user</li>
-</ul>
-<p>In real life:</p>
-<ul>
-<li>I can read easily technical and narrative articles/books;</li>
-<li>I can watch films, tv series and YouTube shows (sometimes with the help of subtitles)</li>
-<li>I can handle technical conversation -- I'm able to interact to technical support to explain the issues I'm having and I can understand what it is told to me.</li>
-</ul>
+
