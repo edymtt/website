@@ -2,22 +2,18 @@
 layout: edymtt
 title: curriculum vitae
 ---
+<p class="text-info">I'm starting to migrate all CV related pages to <a href="http://cv.edymtt.io/">cv.edymtt.io</a>.</p>
+
 <p><a href="eric_miotto_cv_en_main.pdf">Download cv in English</a></p>
 <p><a href="eric_miotto_cv_en_tldr.pdf">Download short cv in English</a></p>
 <p><a href="http://cv.edymtt.io/">(alpha) HTML cv in English</a></p>
 <p><a href="eric_miotto_cv_it_main.pdf">Download cv in Italian</a></p>
-<p>Updated on 2013/09/01 11:06 UTC circa, <a href="/cvrevisionhistory.html">changelog</a></p>
+<p>Updated on 2013/09/01 11:06 UTC circa, <a href="/cvrevisionhistory.html">changelog (manually updated, deprecated)</a></p>
 
 You can also find me on "Stack Overflow Careers 2.0":http://careers.stackoverflow.com/edymtt and "LinkedIn":http://it.linkedin.com/in/ericmiotto
 
 <h3>Additional info</h3>
 <h4>Autoevaluation of computer skills</h4>
 <p> See <a href="/syllabus/skills.html">Syllabus</a></p>
-
-h4. Thesis
-
-Master thesis: "Challenges in the Integration of domain-specific and scientific bodies of knowledge in Model-Driven Engineering":challenges_mde_master_thesis_eric_miotto.pdf
-
-First thesis (In italian): "Un’architettura orientata ai servizi che offra alta disponibilità":soa_first_thesis_eric_miotto.pdf
 
 
