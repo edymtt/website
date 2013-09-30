@@ -2,7 +2,7 @@
 layout: post
 title: Compiling Firefox (again)
 tags: firefox
-updatedonutc: 2013-09-19 14:57 UTC
+updatedonutc: 2013-09-20 09:55 UTC
 ---
 
 <p>I'll try to document how to set up OS X to compile Firefox -- in order to have all the relevant links in one place.
@@ -10,4 +10,11 @@ Please note that his information might became obsolete, please check the date of
 
 <ul>
 	<li>Setup the environment with the bootstrap script (<a href="https://developer.mozilla.org/en-US/docs/Developer_Guide/Build_Instructions/Mac_OS_X_Prerequisites">link in MDN</a>)</li>
+	<ul>
+	  <li>Python will be installed from Homebrew (since Python >= 2.7.3 is required). If link fails because pip executables will be overwritten, uninstall pip using pip uninstall pip (sudo may be needed)</li>
+    </ul>
+    <li>build with mach</li>
+    <ul>
+    	<li>the tool is refined, presenting clear feedback about progress</li>
+    </ul>
 </ul>
